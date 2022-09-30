@@ -1,6 +1,6 @@
 # Idempotence
 
-Imdempotence (which you may read a formal definition of on [Wikipedia](https://en.wikipedia.org/wiki/Idempotence), when we are talking about messaging, is when a message redelivery can be handled without ending up in an unintended state.
+Idempotence (which you may read a formal definition of on [Wikipedia](https://en.wikipedia.org/wiki/Idempotence), when we are talking about messaging, is when a message redelivery can be handled without ending up in an unintended state.
 
 ## Delivery guarantees[^1]
 
@@ -8,7 +8,7 @@ Imdempotence (which you may read a formal definition of on [Wikipedia](https://e
 
 Before we talk about idempotency, let's talk about the delivery of messages on the consumer side.
 
-Since CAP doesn't uses MS DTC or other type of 2PC distributed transaction mechanism, there is a problem that the message is strictly delivered at least once. Specifically, in a message-based system, there are three possibilities:
+Since CAP doesn't use MS DTC or another type of 2PC distributed transaction mechanism, there is a problem that the message is strictly delivered at least once. Specifically, in a message-based system, there are three possibilities:
 
 * Exactly Once(*)  
 * At Most Once 
@@ -31,7 +31,7 @@ This type of delivery guarantee can arise from your messaging system and your co
     Yes:
         1. Commit work transaction
     No: 
-        1. Roll back work transaction
+        1. Rollback work transaction
         2. Put message back into the queue
 ```
 
